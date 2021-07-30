@@ -1,6 +1,8 @@
+import Sample from "@/components/company/Sample";
+
 const Company = () => {
   return (
-    <div>company</div>
+    <Sample />
   )
 }
 
