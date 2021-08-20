@@ -4,7 +4,8 @@ const StackCompanies = () => {
   const { id } = useRouter().query
   return (
     <div>
-      <p>StackCompanies: {id}</p>
+      <p>stack id: {id}</p>
+      <p>companies</p>
     </div>
   )
 }
