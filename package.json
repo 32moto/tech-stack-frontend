@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.3.21",
+    "firebase": "^9.0.0",
     "graphql": "^15.5.1",
     "next": "11.0.1",
     "react": "17.0.2",
