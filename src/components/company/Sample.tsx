@@ -4,6 +4,7 @@ import Image from 'next/image'
 // import assets
 import DefaultCompanyImage from '../../../public/stmn.png'
 import Header from "@/components/common/Header";
+import {companyRepository} from "@/repository/companyRepository";
 
 const mockData = {
     "data": {
@@ -42,9 +43,16 @@ const mockData = {
   }
 }
 
-console.log(DefaultCompanyImage)
+interface Props {
+  companyId: string
+}
 
-const Sample = () => (
+const Sample = ({companyId}: Props) => {
+  console.log(companyId)
+  const { data, loading } = companyRepository().useGetCompany({id: companyId})
+  console.log(data, loading)
+
+  return (
   <div>
     <Header />
     <BaseInfoWrapper>
@@ -52,7 +60,8 @@ const Sample = () => (
       <CompanyName>{mockData.data.company.name}</CompanyName>
     </BaseInfoWrapper>
   </div>
-)
+  )
+}
 
 export default Sample
 
