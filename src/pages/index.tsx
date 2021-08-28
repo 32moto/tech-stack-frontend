@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import { Link } from '@/components/common/Link'
 
 export default function Home() {
   return (
@@ -15,6 +15,7 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
+        <Link href={`/stacks/${1}/companies`}>stacks/1/companies</Link>
       </main>
     </div>
   )
