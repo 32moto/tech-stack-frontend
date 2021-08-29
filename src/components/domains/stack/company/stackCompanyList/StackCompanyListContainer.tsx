@@ -20,6 +20,16 @@ const mockCompanies: StackCompanyType[] = [
     name: '株式会社 HOGE',
     defaultImagePath: 'https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg'
   },
+  {
+    id: '3',
+    name: '株式会社 booboo',
+    defaultImagePath: 'https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg'
+  },
+  {
+    id: '4',
+    name: '株式会社 yunboo',
+    defaultImagePath: 'https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg'
+  },
 ]
 
 const StackCompanyListContainer = ({stackId} : Props) => {
