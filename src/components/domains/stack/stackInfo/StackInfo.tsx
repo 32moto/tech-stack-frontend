@@ -1,4 +1,4 @@
-import { Infomation } from "@/components/common/Infomation"
+import { Infomation } from '@/components/common/Infomation'
 
 interface Props {
   stackName: string
