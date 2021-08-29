@@ -1,7 +1,5 @@
 import styled from "styled-components"
-
-type ShapeType = 'circle' | 'rouded'
-type SizeType = 's' | 'm' | 'l'
+import { ShapeType, SizeType } from "./";
 
 interface Props {
   src: string

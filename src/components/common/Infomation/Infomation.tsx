@@ -1,9 +1,10 @@
 import styled from "styled-components"
-import { InfomationIcon } from "@/components/common/Icon"
+import { InfomationIcon, ShapeType } from "@/components/common/Icon"
 
 interface Props {
   icon: string
   name: string
+  iconShape: ShapeType
 }
 
 const isShare = true

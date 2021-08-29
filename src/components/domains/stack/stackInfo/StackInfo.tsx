@@ -6,7 +6,7 @@ interface Props {
 }
 
 const StackInfo = ({stackName, icon} : Props) => {
-  return <Infomation name={stackName} icon={icon} />
+  return <Infomation name={stackName} icon={icon} iconShape={'circle'} />
 }
 
 export default StackInfo
