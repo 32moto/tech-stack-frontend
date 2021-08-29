@@ -9,6 +9,9 @@ export const GlobalStyle = createGlobalStyle`
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
+  h1, h2, h3, h4, h5, p, span {
+    color: #7D7D7D;
+  }
   button {
     background: none;
     border: none;
