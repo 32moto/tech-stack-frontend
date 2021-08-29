@@ -26,12 +26,8 @@ const StackCompanyList = ({companies} : Props) => {
 export default StackCompanyList
 
 const Wrapper = styled.div`
-  ${sp`
-
-  `}
-  ${pc`
-    display: none;
-  `}
+  ${sp``}
+  ${pc``}
 `
 
 const H3 = styled.h3`
