@@ -1,4 +1,6 @@
+import styled from 'styled-components'
 import { StackCompanyType } from "@/types/stack/company"
+import { sp, pc } from '@/config/media'
 
 interface Props {
   companies: StackCompanyType[]
@@ -6,14 +8,23 @@ interface Props {
 
 const StackCompanyList = ({companies} : Props) => {
   return (
-    <ul>
+    <Ul>
       {companies.map(company => (
         <li key={company.id}>
           <p>{company.name}</p>
         </li>
       ))}
-    </ul>
+    </Ul>
   )
 }
 
 export default StackCompanyList
+
+const Ul = styled.ul`
+  ${sp`
+
+  `}
+  ${pc`
+    display: none;
+  `}
+`
