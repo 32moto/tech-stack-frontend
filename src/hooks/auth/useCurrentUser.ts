@@ -1,9 +1,8 @@
 import { authRepository } from "@/repository/authRepository"
 
 export const useCurrentUser = () => {
-  const currentUser = authRepository().getCurrentUser()
+  const { data } = authRepository().useGetCurrentUser()
   return {
-    isAuth: currentUser != undefined,
-    currentUser
+    currentUser: data
   }
 }

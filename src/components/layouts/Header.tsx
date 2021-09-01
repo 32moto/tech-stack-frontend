@@ -6,13 +6,13 @@ import { Icon } from '@/components/common/Icon'
 import { useCurrentUser } from '@/hooks/auth/useCurrentUser'
 
 export const Header = () => {
-  const { isAuth, currentUser } = useCurrentUser()
+  const { currentUser } = useCurrentUser()
   return (
     <StyledHeader>
       <Link href='/'>
         <H1>Tech Stack</H1>
       </Link>
-      {isAuth && (
+      {currentUser && (
         <Icon src={currentUser.iconPath} alt={currentUser.name} shape='circle' size='xs' />
       )}
     </StyledHeader>
