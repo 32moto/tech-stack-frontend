@@ -5,18 +5,21 @@ import { client } from '@/libs/apollo'
 import { GlobalStyle } from '@/config/globalStyle';
 // context
 import { StyleProvider } from '@/context/style';
+import { AuthProvider } from '@/context/auth';
 // components
 import { Layout } from '@/components/layouts';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ApolloProvider client={client}>
-      <GlobalStyle />
-      <StyleProvider>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </StyleProvider>
+      <AuthProvider>
+        <GlobalStyle />
+        <StyleProvider>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </StyleProvider>
+      </AuthProvider>
     </ApolloProvider>
   );
 }
