@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { getIconSize, ShapeType, SizeType } from "./";
 
-interface Props {
+export interface Props {
   src: string
   alt: string
   shape: ShapeType

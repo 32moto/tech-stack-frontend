@@ -1,13 +1,16 @@
 import { Icon } from "./Icon";
-import { InfomationIcon } from "./InfomationIcon";
+import { InformationIcon } from "./InformationIcon";
+import { UserIcon } from "./UserIcon";
 
 // type
 export type ShapeType = 'circle' | 'rouded'
-export type SizeType = 's' | 'm' | 'l'
+export type SizeType = 'xs' |'s' | 'm' | 'l'
 
 // function
 export const getIconSize = (size: SizeType) => {
   switch(size) {
+    case 'xs':
+      return 30;
     case 's':
       return 45;
     case 'm':
@@ -22,5 +25,6 @@ export const getIconSize = (size: SizeType) => {
 // components
 export {
   Icon,
-  InfomationIcon,
+  InformationIcon,
+  UserIcon
 }
