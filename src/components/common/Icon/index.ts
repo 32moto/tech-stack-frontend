@@ -1,5 +1,6 @@
 import { Icon } from "./Icon";
-import { InfomationIcon } from "./InfomationIcon";
+import { InformationIcon } from "./InformationIcon";
+import { UserIcon } from "./UserIcon";
 
 // type
 export type ShapeType = 'circle' | 'rouded'
@@ -24,5 +25,6 @@ export const getIconSize = (size: SizeType) => {
 // components
 export {
   Icon,
-  InfomationIcon,
+  InformationIcon,
+  UserIcon
 }

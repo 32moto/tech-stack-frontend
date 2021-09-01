@@ -1,4 +1,4 @@
-import { Infomation } from '@/components/common/Infomation'
+import { Information } from '@/components/common/Information'
 
 interface Props {
   stackName: string
@@ -6,7 +6,7 @@ interface Props {
 }
 
 const StackInfo = ({stackName, icon} : Props) => {
-  return <Infomation name={stackName} icon={icon} iconShape={'circle'} />
+  return <Information name={stackName} icon={icon} iconShape={'circle'} />
 }
 
 export default StackInfo

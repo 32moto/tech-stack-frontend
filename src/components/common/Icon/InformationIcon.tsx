@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { getIconSize, ShapeType, SizeType } from "./";
+import { getIconSize, ShapeType, SizeType } from ".";
 
 interface Props {
   src: string
@@ -8,7 +8,7 @@ interface Props {
   size: SizeType
 }
 
-export const InfomationIcon = ({src, alt, shape, size}: Props) => {
+export const InformationIcon = ({src, alt, shape, size}: Props) => {
   const imageSize = getIconSize(size)
   return (
     <Img src={src} alt={alt} shape={shape} size={imageSize} />
