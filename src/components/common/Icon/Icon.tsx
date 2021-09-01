@@ -1,8 +1,8 @@
 import styled from "styled-components"
 import { getIconSize, ShapeType, SizeType } from "./";
 
-interface Props {
-  src?: string
+export interface Props {
+  src: string
   alt: string
   shape: ShapeType
   size: SizeType
@@ -10,9 +10,8 @@ interface Props {
 
 export const Icon = ({src, alt, shape, size}: Props) => {
   const imageSize = getIconSize(size)
-  const iconPath = src || ''
   return (
-    <Img src={iconPath} alt={alt} shape={shape} size={imageSize} />
+    <Img src={src} alt={alt} shape={shape} size={imageSize} />
   )
 }
 
