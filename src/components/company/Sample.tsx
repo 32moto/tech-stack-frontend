@@ -1,3 +1,4 @@
+
 import styled from 'styled-components'
 import { COLORS, FONT_SIZES } from "@/constants/Styles"
 import Image from 'next/image'
@@ -62,7 +63,6 @@ const Sample = ({companyId}: Props) => {
   </div>
   )
 }
-
 export default Sample
 
 const BaseInfoWrapper = styled.div`
