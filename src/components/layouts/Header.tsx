@@ -6,7 +6,7 @@ import { Icon } from '@/components/common/Icon'
 import { useCurrentUser } from '@/hooks/auth/useCurrentUser'
 
 export const Header = () => {
-  const { currentUser } = useCurrentUser()
+  const currentUser = useCurrentUser()
   return (
     <StyledHeader>
       <Link href='/'>
