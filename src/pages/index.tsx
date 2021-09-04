@@ -11,6 +11,9 @@ export default function Home() {
         <li>
           <Link href={`/stacks/${1}/companies`}>stacks/:id/companies</Link>
         </li>
+        <li>
+          <Link href={`/users/${1}`}>users/:id</Link>
+        </li>
       </ul>
       <LoginContainer />
       <LogoutContainer />

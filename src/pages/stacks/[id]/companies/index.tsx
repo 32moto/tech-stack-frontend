@@ -1,4 +1,4 @@
-import { useRouter } from "next/dist/client/router"
+import { useRouter } from "next/router"
 import StackInfoContainer from "@/components/domains/stack/stackInfo/StackInfoContainer"
 import StackCompanyListContainer from "@/components/domains/stack/company/stackCompanyList/StackCompanyListContainer"
 
