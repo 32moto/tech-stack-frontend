@@ -1,4 +1,4 @@
-import { useListenAuthState } from "@/hooks/auth/useListenAuthState";
+import { useListenAuthState } from "./hooks";
 
 export const AppConfig = () => {
   useListenAuthState()

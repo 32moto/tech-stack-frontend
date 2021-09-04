@@ -1,5 +1,7 @@
 import { Link } from '@/components/common/Link'
-import { login, logout } from '@/libs/firebase/auth'
+import { LoginContainer } from '@/components/domains/auth/Login'
+import { LogoutContainer } from '@/components/domains/auth/Logout'
+
 
 export default function Home() {
   return (
@@ -10,8 +12,8 @@ export default function Home() {
           <Link href={`/stacks/${1}/companies`}>stacks/:id/companies</Link>
         </li>
       </ul>
-      <button onClick={() => {login()}}>login</button>
-      <button onClick={() => {logout()}}>logout</button>
+      <LoginContainer />
+      <LogoutContainer />
     </div>
   )
 }

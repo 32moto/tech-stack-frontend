@@ -4,13 +4,13 @@ export interface GetCurrentUserResponseType {
   iconPath: string
 }
 
-export interface MutateCurrentUserResponseType {
+export interface SetCurrentUserResponseType {
   id: string
   name: string
   iconPath: string | null
 }
 
-export interface MutateCurrentUserVarsType {
+export interface SetCurrentUserVarsType {
   id: string
   name: string
   iconPath: string | null

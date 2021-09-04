@@ -1,16 +1,25 @@
 import { useMutation, useQuery } from "@apollo/client"
 import {
   GetCurrentUserResponseType,
-  MutateCurrentUserResponseType,
-  MutateCurrentUserVarsType
+  SetCurrentUserResponseType,
+  SetCurrentUserVarsType
 } from "@/types/api/auth"
-import { GET_CURRENT_USER, MUTATE_CURRENT_USER } from "./query"
+import { firebaseLogin,  firebaseLogout } from "@/libs/firebase/auth"
+import { GET_CURRENT_USER, SET_CURRENT_USER } from "./query"
 
 export const authRepository = () => {
-  const useGetCurrentUser = () => useQuery<GetCurrentUserResponseType>(GET_CURRENT_USER)
-  const useMutateCurrentUser = () => useMutation<MutateCurrentUserResponseType, MutateCurrentUserVarsType | null>(MUTATE_CURRENT_USER)
+  const useGetCurrentUser = () => useQuery<GetCurrentUserResponseType | null>(GET_CURRENT_USER)
+  const useSetCurrentUser = () => useMutation<SetCurrentUserResponseType, SetCurrentUserVarsType | null>(SET_CURRENT_USER)
+  const login = async () => {
+    return await firebaseLogin()
+  }
+  const logout = async () => {
+    return await firebaseLogout()
+  }
   return {
     useGetCurrentUser,
-    useMutateCurrentUser
+    useSetCurrentUser,
+    login,
+    logout
   }
 }

@@ -8,7 +8,7 @@ export const GET_CURRENT_USER = gql`
   }
 `
 
-export const MUTATE_CURRENT_USER = gql`
+export const SET_CURRENT_USER = gql`
   mutation CurrentUser($id: ID!, $name: String!, $iconPath: String) {
     currentUser(id: $id, name: $name, iconPath: $iconPath) {
       id,

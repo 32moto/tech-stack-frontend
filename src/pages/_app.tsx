@@ -7,7 +7,7 @@ import { GlobalStyle } from '@/config/globalStyle';
 import { StyleProvider } from '@/context/style';
 // components
 import { Layout } from '@/components/layouts';
-import { AppConfig } from '@/components/common/AppConfig/AppConfig';
+import { AppConfig } from '@/components/common/AppConfig';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
