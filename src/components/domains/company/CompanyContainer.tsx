@@ -1,11 +1,11 @@
-
 import styled from 'styled-components'
 import { COLORS, FONT_SIZES } from "@/constants/Styles"
 import Image from 'next/image'
 // import assets
-import DefaultCompanyImage from '../../../public/stmn.png'
-import Header from "@/components/common/Header";
-import {companyRepository} from "@/repository/companyRepository";
+import DefaultCompanyImage from '../../../../public/stmn.png'
+import { companyRepository } from "@/repository/companyRepository";
+// import component
+import CompanyStackList from "@/components/domains/company/CompanyStackList";
 
 const mockData = {
     "data": {
@@ -48,26 +48,27 @@ interface Props {
   companyId: string
 }
 
-const Sample = ({companyId}: Props) => {
+const CompanyContainer = ({companyId}: Props) => {
   console.log(companyId)
-  const { data, loading } = companyRepository().useGetCompany({id: companyId})
-  console.log(data, loading)
+  // const { data, loading } = companyRepository().useGetCompany({id: companyId})
+  // console.log(data, loading)
 
+  // 一旦Mockデータを流す
   return (
-  <div>
-    <Header />
-    <BaseInfoWrapper>
-      <Image src={mockData.data.company.defaultImagePath} height={75} width={75} />
-      <CompanyName>{mockData.data.company.name}</CompanyName>
-    </BaseInfoWrapper>
-  </div>
+    <div>
+      <BaseInfoWrapper>
+        <Image src={mockData.data.company.defaultImagePath} height={75} width={75} />
+        <CompanyName>{mockData.data.company.name}</CompanyName>
+      </BaseInfoWrapper>
+      <CompanyStackList stacks={mockData.data.company.stacks} />
+    </div>
   )
 }
-export default Sample
+export default CompanyContainer
 
 const BaseInfoWrapper = styled.div`
   display: flex;
-  margin: 70px 0 0 60px;
+  margin: 70px 0 40px 60px;
 `
 
 const CompanyName = styled.p`

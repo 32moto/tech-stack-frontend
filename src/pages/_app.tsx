@@ -12,7 +12,7 @@ import { AppConfig } from '@/components/common/AppConfig';
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ApolloProvider client={client}>
-      <AppConfig />
+      {/*<AppConfig />*/}
       <GlobalStyle />
       <StyleProvider>
         <Layout>

@@ -1,16 +1,16 @@
-export interface CompanyType {
+export type GetCompanyResponseType = {
   id: string
   name: string
   defaultImagePath: string
-  stack: CompanyStackType[]
+  stacks: CompanyStackType[]
 }
 
-export interface GetCompanyParamsType {
+export interface GetCompanyVarsType {
   id: string
 }
 
 export interface CompanyStackType {
   id: string
   name: string
-  defaultImagePath: StaticImageData
+  defaultImagePath: string
 }

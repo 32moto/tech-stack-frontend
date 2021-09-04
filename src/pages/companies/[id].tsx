@@ -1,10 +1,11 @@
 import { useRouter } from "next/dist/client/router"
-import Sample from "@/components/company/Sample";
+import CompanyContainer from "@/components/domains/company/CompanyContainer";
 
 const Company = () => {
   const { id } = useRouter().query
+
   return (
-    <Sample companyId={id}/>
+    <CompanyContainer companyId={String(id)}/>
   )
 }
 

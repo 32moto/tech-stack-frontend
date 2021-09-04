@@ -1,3 +1,4 @@
-export type RoutesType = 
+export type RoutesType =
 `/` |
-`/stacks/${number}/companies`
+`/stacks/${number}/companies` |
+`/companies/${number}`

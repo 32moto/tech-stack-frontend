@@ -10,7 +10,7 @@ export const firebaseLogin = async () => {
   try {
     const provider = new GoogleAuthProvider();
     await signInWithPopup(auth, provider)
-    
+
   } catch (error) {
     console.log(error);
     const errorCode = error.code;
