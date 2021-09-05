@@ -8,5 +8,5 @@ interface Props {
 const defaultUserImg = 'https://i0.wp.com/www.repol.copl.ulaval.ca/wp-content/uploads/2019/01/default-user-icon.jpg'
 
 export const StackUserListItemContainer = ({ user } : Props) => {
-  return <StackUserListItem id={user.id} name={user.name} iconPath={user.iconPath || defaultUserImg} />
+  return <StackUserListItem id={user.id} name={user.name} iconPath={user.imagePath || defaultUserImg} />
 }
