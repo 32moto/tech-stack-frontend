@@ -10,5 +10,5 @@ export const StackInfoContainer = ({id} : Props) => {
   if(error) return <p>error</p>
   if(loading) return <p>loading...</p>
   if(!stack) return null
-  return <StackInfo stackName={stack.name} icon={stack.iconPath} />
+  return <StackInfo stackName={stack.name} icon={stack.imagePath} />
 }

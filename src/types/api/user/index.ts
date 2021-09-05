@@ -3,10 +3,14 @@ export interface GetUserParamsType {
   id: string
 }
 
-export interface GetUserResponseType {
+interface UserType {
   id: string,
   name: string
-  iconPath: string | null
+  imagePath: string | null
+}
+
+export interface GetUserResponseType {
+  getUser: UserType
 }
 
 export interface GetUserVarsType {
@@ -19,13 +23,15 @@ export interface GetUserStacksParamsType {
 }
 
 export interface GetUserStacksResponseType {
-  stacks: StackType[]
+  getUser: {
+    stacks: StackType[]
+  }
 }
 
 interface StackType {
   id: string,
   name: string
-  iconPath: string | null
+  imagePath: string
 }
 
 export interface GetUserStacksVarsType {

@@ -4,13 +4,13 @@ import { Item } from "@/components/common/List/Item"
 interface Props {
   id: string
   name: string
-  iconPath: string  
+  imagePath: string  
 }
 
-export const StackCompanyListItem = ({ id, name, iconPath } : Props) => {
+export const StackCompanyListItem = ({ id, name, imagePath } : Props) => {
   return (
     <Link href={`/companies/${id}`}>
-      <Item name={name} imageSrc={iconPath} iconShape='rouded' iconSize='s' />    
+      <Item name={name} imageSrc={imagePath} iconShape='rouded' iconSize='s' />    
     </Link>
   )
 }

@@ -29,6 +29,6 @@ export const convertToUser = (user: User): UserType => {
   return {
     id: user.uid,
     name: user.displayName || 'No name',
-    iconPath: user.photoURL
+    imagePath: user.photoURL
   }
 }
