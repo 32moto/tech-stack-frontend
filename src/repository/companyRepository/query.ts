@@ -1,7 +1,7 @@
 import { gql } from "@apollo/client";
 
 export const GET_COMPANY = gql `
-  query getCompany {
+  query getCompany($id: ID!) {
     company(id: $id) {
       id
       name

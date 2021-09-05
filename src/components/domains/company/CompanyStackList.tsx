@@ -8,12 +8,14 @@ interface Props {
 
 const CompanyStackList = ({stacks}: Props) => {
   // 一旦Mockデータを流す
+  console.log('stacks', stacks)
+
   return (
     <div>
       <Ul>
         {stacks.map(stack => (
           <Li key={stack.id}>
-            <Image src={stack.defaultImagePath} height={45} width={45}></Image>
+            {/*<Image src={stack.defaultImagePath} height={45} width={45}></Image>*/}
             <div>{stack.name}</div>
           </Li>
         ))}

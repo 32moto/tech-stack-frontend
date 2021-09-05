@@ -1,8 +1,10 @@
 export type GetCompanyResponseType = {
-  id: string
-  name: string
-  defaultImagePath: string
-  stacks: CompanyStackType[]
+  company: {
+    id: string
+    name: string
+    defaultImagePath: string
+    stacks: CompanyStackType[]
+  }
 }
 
 export interface GetCompanyVarsType {
