@@ -11,7 +11,7 @@ const CompanyInfoContainer = ({companyId}: Props) => {
   if(!data) return null
   console.log(data)
   return (
-    <CompanyInfo companyName={data.company.name} icon={data.company.imagePath} />
+    <CompanyInfo companyName={data.company.name} imagePath={data.company.imagePath} />
   )
 }
 
