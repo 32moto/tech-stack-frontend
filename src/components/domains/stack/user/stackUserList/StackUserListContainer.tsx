@@ -9,8 +9,6 @@ interface Props {
 
 export const StackUserListContainer = ({ stackId } : Props) => {
   const {users, loading} = useGetStackUsers({stackId})
-  console.log(users);
-  
   if(loading) return <p>loading...</p>
   if(!users) return null
   return <StackUserList users={users} />
