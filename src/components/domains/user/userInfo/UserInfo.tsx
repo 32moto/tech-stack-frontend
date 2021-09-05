@@ -6,5 +6,5 @@ interface Props {
 }
 
 export const UserInfo = ({userName, icon} : Props) => {
-  return <Information name={userName} icon={icon} iconShape={'circle'} />
+  return <Information name={userName} icon={icon} iconShape={'circle'} isShare={true} />
 }
