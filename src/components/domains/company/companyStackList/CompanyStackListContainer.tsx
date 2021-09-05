@@ -9,7 +9,7 @@ interface Props {
 
 const CompanyStackListContainer = ({companyId}: Props) => {
   const { data, loading } = companyRepository().useGetCompanyStack({id: companyId})
-  console.log(data)
+
   if(loading) return <p>loading...</p>
   if(!data) return null
 
