@@ -1,6 +1,6 @@
 import { useRouter } from "next/router"
-import StackInfoContainer from "@/components/domains/stack/stackInfo/StackInfoContainer"
-import StackCompanyListContainer from "@/components/domains/stack/company/stackCompanyList/StackCompanyListContainer"
+import { StackInfoContainer } from "@/components/domains/stack/stackInfo"
+import { StackCompanyListContainer } from "@/components/domains/stack/company/stackCompanyList"
 
 const StackCompanies = () => {
   const { id } = useRouter().query

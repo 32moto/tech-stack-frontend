@@ -1,3 +1,7 @@
+export interface GetStackCompanyParamsType {
+  id: string
+}
+
 export type GetStackCompanyResponseType = {
   id: string
   name: string

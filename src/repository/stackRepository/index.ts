@@ -1,7 +1,6 @@
 import { useQuery } from "@apollo/client"
-import { GetStackCompanyResponseType, GetStackCompanyVarsType } from '@/types/api/stack/company'
+import { GetStackCompanyParamsType, GetStackCompanyResponseType, GetStackCompanyVarsType } from '@/types/api/stack/company'
 import { GetStackUsersParamsType, GetStackUsersResponseType, GetStackUsersVarsType } from '@/types/api/stack/user'
-import { GetStackCompanyParamsType } from '@/types/stack/company'
 import { GET_STACK_COMPANIES, GET_STACK_USERS } from "./query"
 
 export const stackRepository = () => {
