@@ -1,8 +1,8 @@
 import { IconTextItem } from "@/components/common/List/IconTextItem"
-import { StackType } from "@/types/user/stack"
+import { CompanyStackType } from "@/types/company";
 
 interface Props {
-  stack: StackType
+  stack: CompanyStackType
 }
 
 export const CompanyStackListItem = ({ stack } :Props) => {

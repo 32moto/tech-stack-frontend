@@ -1,11 +1,11 @@
 // import components
 import {CompanyStackListItem} from "@/components/domains/company/companyStackListItem/CompanyStackListItem";
 // import types
-import { StackType } from "@/types/user/stack"
+import { CompanyStackType } from "@/types/company";
 
 
 interface Props {
-  stack: StackType
+  stack: CompanyStackType
 }
 
 export const CompanyStackListItemContainer = ({ stack }: Props) => {
