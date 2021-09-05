@@ -12,5 +12,5 @@ export interface GetCompanyParamsType {
 export interface CompanyStackType {
   id: string
   name: string
-  defaultImagePath: StaticImageData
+  iconPath: string
 }
