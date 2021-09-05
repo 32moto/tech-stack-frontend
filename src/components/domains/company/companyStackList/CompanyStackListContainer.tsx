@@ -1,7 +1,6 @@
 // import components
 import CompanyStackList from "@/components/domains/company/companyStackList/CompanyStackList";
-// import types
-import { CompanyStackType } from "@/types/company";
+// import repository
 import {companyRepository} from "@/repository/companyRepository";
 
 interface Props {

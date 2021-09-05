@@ -23,5 +23,5 @@ export interface GetCompanyStackVarsType {
 export interface CompanyStackType {
   id: string
   name: string
-  defaultImagePath: string
+  iconPath: string
 }

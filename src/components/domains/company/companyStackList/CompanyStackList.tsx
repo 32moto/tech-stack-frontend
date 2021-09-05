@@ -1,6 +1,9 @@
 import styled from 'styled-components'
-import Image from 'next/image'
+// import component
+import { CompanyStackListItemContainer } from "@/components/domains/company/companyStackListItem/CompanyStackListItemContainer";
+// import types
 import { CompanyStackType } from "@/types/company";
+
 
 interface Props {
   stacks: CompanyStackType[]
@@ -13,8 +16,7 @@ const CompanyStackList = ({stacks}: Props) => {
       <Ul>
         {stacks.map(stack => (
           <Li key={stack.id}>
-            <img src={stack.defaultImagePath} height={45} width={45}></img>
-            <div>{stack.name}</div>
+            <CompanyStackListItemContainer stack={stack}/>
           </Li>
         ))}
       </Ul>
