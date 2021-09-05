@@ -9,3 +9,13 @@ export const GET_STACK_COMPANIES =  gql`
     }
   }
 `
+
+export const GET_STACK_USERS =  gql`
+  stack(id: $id) {
+    users {
+      id
+      name
+      iconPath
+    }
+  }
+`
