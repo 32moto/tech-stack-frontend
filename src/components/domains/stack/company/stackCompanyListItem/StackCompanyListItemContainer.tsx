@@ -6,5 +6,5 @@ interface Props {
 }
 
 export const StackCompanyListItemContainer = ({company} : Props) => {
-  return <StackCompanyListItem name={company.name} iconPath={company.defaultImagePath} />
+  return <StackCompanyListItem id={company.id} name={company.name} iconPath={company.defaultImagePath} />
 }
