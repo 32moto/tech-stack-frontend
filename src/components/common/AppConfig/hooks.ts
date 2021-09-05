@@ -7,9 +7,7 @@ export const useListenAuthState = () => {
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
       if(user) {
-        console.log(user);
         const convertedUser = convertToUser(user)
-        console.log(convertedUser);
         // setCurrentUser({variables: convertToUser(user)})
       }else {
         console.log(user);
