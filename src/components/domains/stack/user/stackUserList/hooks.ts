@@ -23,6 +23,11 @@ const mockUsers: StackUserType[] = [
     name: 'Kengo Teshima',
     iconPath: 'https://avatars.githubusercontent.com/u/61037834?v=4'
   },
+  {
+    id: '5',
+    name: 'nanashi',
+    iconPath: null
+  },
 ]
 
 interface Props {

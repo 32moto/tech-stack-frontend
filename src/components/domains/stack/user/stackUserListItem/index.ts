@@ -1,5 +1,5 @@
-import { StackUserListItem } from "./StackUserListItem";
+import { StackUserListItemContainer } from "./StackUserListItemContainer";
 
 export {
-  StackUserListItem
+  StackUserListItemContainer
 }

@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { StackUserType } from "@/types/stack/user"
 import { sp, pc } from '@/config/media'
 // stack company
-import { StackUserListItem } from '@/components/domains/stack/user/stackUserListItem'
+import { StackUserListItemContainer } from '@/components/domains/stack/user/stackUserListItem'
 
 interface Props {
   users: StackUserType[]
@@ -15,7 +15,7 @@ export const StackUserList = ({ users } : Props) => {
       <Ul>
       {users.map(user => (
           <li key={user.id}>
-            <StackUserListItem user={user} />
+            <StackUserListItemContainer user={user} />
           </li>
         ))}
       </Ul>
