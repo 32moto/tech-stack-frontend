@@ -5,11 +5,10 @@ export const GET_COMPANY = gql `
     company(id: $id) {
       id
       name
-      defaultImagePath
+      imagePath
     }
   }
 `
-
 
 export const GET_COMPANY_STACK = gql `
   query getCompanyStack($id: ID!) {
@@ -17,7 +16,7 @@ export const GET_COMPANY_STACK = gql `
       stacks {
         id
         name
-        defaultImagePath
+        imagePath
       }
     }
   }

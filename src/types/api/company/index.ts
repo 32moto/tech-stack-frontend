@@ -1,8 +1,12 @@
+export interface GetCompanyParamsType {
+  id: string
+}
+
 export type GetCompanyResponseType = {
   company: {
     id: string
     name: string
-    defaultImagePath: string
+    imagePath: string
   }
 }
 
@@ -23,5 +27,5 @@ export interface GetCompanyStackVarsType {
 export interface CompanyStackType {
   id: string
   name: string
-  iconPath: string
+  imagePath: string
 }
