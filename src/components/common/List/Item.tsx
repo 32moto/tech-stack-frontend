@@ -20,7 +20,7 @@ export const Item = ({ name, imageSrc, iconShape, iconSize }: Props) => {
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  border-top: 1px solid ${({theme}) => theme.colors.glay[300]};
+  border-top: 1px solid ${({theme}) => theme.colors.gray[300]};
   padding: 16px;
 `
 
