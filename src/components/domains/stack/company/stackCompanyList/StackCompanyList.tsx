@@ -2,28 +2,26 @@ import styled from 'styled-components'
 import { StackCompanyType } from "@/types/stack/company"
 import { sp, pc } from '@/config/media'
 // stack company
-import { StackCompanyListItem } from '@/components/domains/stack/company/stackCompanyListItem'
+import { StackCompanyListItemContainer } from '@/components/domains/stack/company/stackCompanyListItem'
 
 interface Props {
   companies: StackCompanyType[]
 }
 
-const StackCompanyList = ({companies} : Props) => {
+export const StackCompanyList = ({companies} : Props) => {
   return (
     <Wrapper>
       <H3>Companies</H3>
       <Ul>
       {companies.map(company => (
           <li key={company.id}>
-            <StackCompanyListItem company={company} />
+            <StackCompanyListItemContainer company={company} />
           </li>
         ))}
       </Ul>
     </Wrapper>
   )
 }
-
-export default StackCompanyList
 
 const Wrapper = styled.div`
   ${sp``}

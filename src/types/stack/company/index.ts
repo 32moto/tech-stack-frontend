@@ -3,7 +3,3 @@ export interface StackCompanyType {
   name: string
   defaultImagePath: string
 }
-
-export interface GetStackCompanyParamsType {
-  id: string
-}

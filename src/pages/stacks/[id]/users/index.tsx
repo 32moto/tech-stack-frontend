@@ -1,5 +1,5 @@
 import { useRouter } from "next/router"
-import StackInfoContainer from "@/components/domains/stack/stackInfo/StackInfoContainer"
+import { StackInfoContainer } from "@/components/domains/stack/stackInfo"
 import { StackUserListContainer } from "@/components/domains/stack/user/stackUserList"
 
 
