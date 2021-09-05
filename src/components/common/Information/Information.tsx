@@ -9,10 +9,10 @@ interface Props {
 
 const isShare = true
 
-export const Information = ({icon, name} : Props) => {
+export const Information = ({icon, name, iconShape} : Props) => {
   return (
     <Container>
-      <InformationIcon src={icon} alt={name} shape={'circle'} size='m' />
+      <InformationIcon src={icon} alt={name} shape={iconShape} size='m' />
       <AboutWrapper>
         <H2>{name}</H2>
         {isShare && (

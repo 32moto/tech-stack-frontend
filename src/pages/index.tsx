@@ -11,6 +11,11 @@ export default function Home() {
       <ul>
         <Li>
           <Link href={`/stacks/${1}/companies`}>stacks/:id/companies</Link>
+        </Li>
+        <Li>
+          <Link href={`/users/${1}`}>users/:id</Link>
+        </Li>
+        <Li>
           <Link href={`/companies/${1}`}>companies/:id</Link>
         </Li>
       </ul>
