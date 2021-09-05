@@ -3,7 +3,7 @@ import { auth, convertToUser } from "@/libs/firebase/auth";
 import { authRepository } from "@/repository/authRepository";
 
 export const useListenAuthState = () => {
-  const [ setCurrentUser ] = authRepository().useSetCurrentUser()
+  // const [ setCurrentUser ] = authRepository().useSetCurrentUser()
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
       if(user) {
@@ -16,5 +16,6 @@ export const useListenAuthState = () => {
         // setCurrentUser({variables: null})
       }
     })
-  }, [setCurrentUser])
+  // }, [setCurrentUser])
+  }, [])
 }

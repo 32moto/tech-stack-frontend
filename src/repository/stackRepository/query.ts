@@ -1,11 +1,11 @@
 import { gql } from "@apollo/client";
 
 export const GET_STACK_COMPANIES =  gql`
-  stack(id: $id) {
-    companies {
+  query getStackCompany ($id: ID!) {
+    stack(id: $id) {
       id
       name
       defaultImagePath
     }
-  }
+  } 
 `
