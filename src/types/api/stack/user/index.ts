@@ -2,11 +2,17 @@ export interface GetStackUsersParamsType {
   id: string
 }
 
-export type GetStackUsersResponseType = {
+interface StackUser {
   id: string
   name: string
-  iconPath: string
-}[]
+  imagePath: string
+}
+
+export type GetStackUsersResponseType = {
+  getStack: {
+    users : StackUser[]
+  }
+}
 
 export interface GetStackUsersVarsType {
   id: string

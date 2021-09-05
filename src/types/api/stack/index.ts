@@ -2,10 +2,12 @@ export interface GetStackParamsType {
   id: string
 }
 
-export type GetStackResponseType = {
-  id: string
-  name: string
-  defaultImagePath: string
+export interface GetStackResponseType {
+  getStack: {
+    id: string
+    name: string
+    imagePath: string
+  }
 }
 
 export interface GetStackVarsType {
