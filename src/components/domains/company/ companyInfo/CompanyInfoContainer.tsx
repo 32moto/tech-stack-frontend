@@ -1,14 +1,17 @@
 import CompanyInfo from "@/components/domains/company/ companyInfo/CompanyInfo";
+import {companyRepository} from "@/repository/companyRepository";
 
 interface Props {
-  companyName: string
-  icon: string
+  companyId: string
 }
 
-const CompanyInfoContainer = ({companyName,icon}: Props) => {
+const CompanyInfoContainer = ({companyId}: Props) => {
+  const { data, loading } = companyRepository().useGetCompany({id: companyId})
+  if(loading) return <p>loading...</p>
+  if(!data) return null
 
   return (
-    <CompanyInfo companyName={companyName} icon={icon} />
+    <CompanyInfo companyName={data.company.name} icon={data.company.defaultImagePath} />
   )
 }
 

@@ -6,6 +6,14 @@ export const GET_COMPANY = gql `
       id
       name
       defaultImagePath
+    }
+  }
+`
+
+
+export const GET_COMPANY_STACK = gql `
+  query getCompanyStack($id: ID!) {
+    company(id: $id) {
       stacks {
         id
         name
