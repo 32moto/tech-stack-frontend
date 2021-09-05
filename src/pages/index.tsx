@@ -10,16 +10,16 @@ export default function Home() {
       <h2>Routes</h2>
       <ul>
         <Li>
-          <Link href={`/stacks/${1}/companies`}>stacks/:id/companies</Link>
+          <Link href={`/stacks/1/companies`}>stacks/:id/companies</Link>
         </Li>
         <Li>
-          <Link href={`/stacks/${1}/users`}>stacks/:id/users</Link>
+          <Link href={`/stacks/1/users`}>stacks/:id/users</Link>
         </Li>
         <Li>
-          <Link href={`/users/${1}`}>users/:id</Link>
+          <Link href={`/users/1`}>users/:id</Link>
         </Li>
         <Li>
-          <Link href={`/companies/${1}`}>companies/:id</Link>
+          <Link href={`/companies/1`}>companies/:id</Link>
         </Li>
       </ul>
       <LoginContainer />
