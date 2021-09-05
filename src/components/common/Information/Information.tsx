@@ -1,15 +1,15 @@
 import styled from "styled-components"
-import { InformationIcon, ShapeType } from "@/components/common/Icon"
+import { InformationIcon, ShapeType, SvgIcon } from "@/components/common/Icon"
+import { MarginPaddingWrapper } from "../Wrapper"
 
 interface Props {
   icon: string
   name: string
   iconShape: ShapeType
+  isShare: boolean
 }
 
-const isShare = true
-
-export const Information = ({icon, name, iconShape} : Props) => {
+export const Information = ({icon, name, iconShape, isShare} : Props) => {
   return (
     <Container>
       <InformationIcon src={icon} alt={name} shape={iconShape} size='m' />
@@ -17,8 +17,16 @@ export const Information = ({icon, name, iconShape} : Props) => {
         <H2>{name}</H2>
         {isShare && (
           <ShareWrapper>
-            <p>twitter</p>
-            <p>github</p>
+            <MarginPaddingWrapper marginRight={8} >
+              <IconButton>
+                <SvgIcon iconType='twitter' />
+              </IconButton>
+            </MarginPaddingWrapper>
+            <MarginPaddingWrapper>
+              <IconButton>
+                <SvgIcon iconType='github' />
+              </IconButton>
+            </MarginPaddingWrapper>
           </ShareWrapper>
         )}
       </AboutWrapper>
@@ -44,4 +52,8 @@ const H2 = styled.h2`
 const ShareWrapper = styled.div`
   display: flex;
   margin-top: 8px;
+`
+
+const IconButton = styled.button`
+  font-size: ${({theme}) => theme.fonts.size[18]};
 `

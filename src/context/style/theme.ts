@@ -8,7 +8,7 @@ export const theme = {
     }
   },
   colors: {
-    glay: {
+    gray: {
       300: '#C8C8C8',
       500: '#7D7D7D'
     }

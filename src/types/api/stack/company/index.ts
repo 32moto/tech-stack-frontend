@@ -1,13 +1,13 @@
-export interface GetStackCompanyParamsType {
+export interface GetStackCompaniesParamsType {
   id: string
 }
 
-export type GetStackCompanyResponseType = {
+export type GetStackCompaniesResponseType = {
   id: string
   name: string
   defaultImagePath: string
 }[]
 
-export interface GetStackCompanyVarsType {
+export interface GetStackCompaniesVarsType {
   id: string
 }

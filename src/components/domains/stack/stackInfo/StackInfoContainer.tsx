@@ -1,11 +1,14 @@
 import StackInfo from '@/components/domains/stack/stackInfo/StackInfo'
+import { useGetStack } from './hooks'
 
 interface Props {
-  id: number
+  id: string
 }
 
 export const StackInfoContainer = ({id} : Props) => {
-  const stackName = 'React'
-  const icon = 'https://cdn.iconscout.com/icon/free/png-512/react-1-282599.png'
-  return <StackInfo stackName={stackName} icon={icon} />
+  const {stack, error, loading} = useGetStack({ id })
+  if(error) return <p>error</p>
+  if(loading) return <p>loading...</p>
+  if(!stack) return null
+  return <StackInfo stackName={stack.name} icon={stack.iconPath} />
 }

@@ -1,6 +1,7 @@
 import { Icon } from "./Icon";
 import { InformationIcon } from "./InformationIcon";
 import { UserIcon } from "./UserIcon";
+import { SvgIcon } from "./SvgIcon";
 
 // type
 export type ShapeType = 'circle' | 'rouded'
@@ -26,5 +27,6 @@ export const getIconSize = (size: SizeType) => {
 export {
   Icon,
   InformationIcon,
-  UserIcon
+  UserIcon,
+  SvgIcon
 }
