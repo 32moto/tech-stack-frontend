@@ -1,8 +1,8 @@
 import { gql } from "@apollo/client";
 
 export const GET_STACK_COMPANIES =  gql`
-  stack(id: $id) {
-    companies {
+  query getStackCompany ($id: ID!) {
+    stack(id: $id) {
       id
       name
       defaultImagePath
@@ -10,12 +10,12 @@ export const GET_STACK_COMPANIES =  gql`
   }
 `
 
-export const GET_STACK_USERS =  gql`
-  stack(id: $id) {
-    users {
-      id
-      name
-      iconPath
-    }
-  }
-`
+// export const GET_STACK_USERS =  gql`
+//   stack(id: $id) {
+//     users {
+//       id
+//       name
+//       iconPath
+//     }
+//   } 
+// `
