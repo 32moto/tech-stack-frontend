@@ -2,10 +2,15 @@ import { gql } from "@apollo/client";
 
 export const GET_USER =  gql`
   query getUser($id: ID!) {
-    getUser(id: $id) {
+    user(id: $id) {
       id
       name
       imagePath
+      stacks {
+        id
+        name
+        imagePath
+      }
     }
   }
 `
