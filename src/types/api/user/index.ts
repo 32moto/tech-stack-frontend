@@ -7,10 +7,11 @@ interface UserType {
   id: string,
   name: string
   imagePath: string | null
+  stacks: StackType[]
 }
 
 export interface GetUserResponseType {
-  getUser: UserType
+  user: UserType
 }
 
 export interface GetUserVarsType {

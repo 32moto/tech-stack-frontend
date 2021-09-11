@@ -1,15 +1,11 @@
-import { useGetUserStacks } from "./hooks";
+import { StackType } from "@/types/user/stack";
 import { UserStackList } from "./UserStackList";
 
 interface Props {
-  id: string
+  stacks: StackType[]
 }
 
-export const UserStackListContainer = ({ id }: Props) => {
-  const {stacks, loading, error} = useGetUserStacks({ id })
-  if(error) return <p>error</p>
-  if(loading) return <p>loading...</p>
-  if(!stacks) return null
+export const UserStackListContainer = ({ stacks }: Props) => {
   return (
     <UserStackList stacks={stacks} />
   )
