@@ -1,5 +1,9 @@
 export const COLORS = {
-  TEXT_COLOR1: '#7D7D7D'
+  TEXT_COLOR1: '#7D7D7D',
+  GRAY: {
+    300: '#C8C8C8',
+    500: '#7D7D7D'
+  }
 }
 
 export const FONT_SIZES = {

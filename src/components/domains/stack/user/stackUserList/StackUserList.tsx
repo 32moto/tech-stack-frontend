@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { StackUserType } from "@/types/stack/user"
+import { FONT_SIZES } from '@/constants/Styles'
 import { sp, pc } from '@/config/media'
 // stack company
 import { StackUserListItemContainer } from '@/components/domains/stack/user/stackUserListItem'
@@ -30,7 +31,7 @@ const Wrapper = styled.div`
 
 const H3 = styled.h3`
   text-align: center;
-  font-size: ${({theme}) => theme.fonts.size[18]};
+  font-size: ${FONT_SIZES.FS_18};
 `
 
 const Ul = styled.ul`

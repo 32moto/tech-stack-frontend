@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+// constants
+import { FONT_SIZES } from '@/constants/Styles'
 // common
 import { Link } from '@/components/common/Link'
 import { Icon } from '@/components/common/Icon'
@@ -28,5 +30,5 @@ const StyledHeader = styled.header`
 `
 
 const H1 = styled.h1`
-  font-size: ${(props) => props.theme.fonts.size[24]};
+  font-size: ${FONT_SIZES.FS_24};
 `
