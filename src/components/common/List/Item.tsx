@@ -1,5 +1,6 @@
-import { Icon, ShapeType, SizeType } from '@/components/common/Icon'
 import styled from 'styled-components'
+import { Icon, ShapeType, SizeType } from '@/components/common/Icon'
+import { COLORS } from '@/constants/Styles'
 
 interface Props {
   name: string
@@ -20,7 +21,7 @@ export const Item = ({ name, imageSrc, iconShape, iconSize }: Props) => {
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  border-top: 1px solid ${({theme}) => theme.colors.gray[300]};
+  border-top: 1px solid ${COLORS.GRAY[300]};
   padding: 16px;
 `
 

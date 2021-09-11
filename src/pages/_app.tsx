@@ -11,15 +11,15 @@ import { AppConfig } from '@/components/common/AppConfig';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ApolloProvider client={client}>
-      {/*<AppConfig />*/}
-      <GlobalStyle />
-      <StyleProvider>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </StyleProvider>
-    </ApolloProvider>
+    <StyleProvider>
+      <ApolloProvider client={client}>
+        {/*<AppConfig />*/}
+        <GlobalStyle />
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+      </ApolloProvider>
+    </StyleProvider>
   );
 }
 export default MyApp

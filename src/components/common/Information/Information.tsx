@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { InformationIcon, ShapeType, SvgIcon } from "@/components/common/Icon"
+import { FONT_SIZES } from "@/constants/Styles"
 import { MarginPaddingWrapper } from "../Wrapper"
 
 interface Props {
@@ -46,7 +47,7 @@ const AboutWrapper = styled.div`
 `
 
 const H2 = styled.h2`
-  font-size: ${({theme}) => theme.fonts.size[24]};
+  font-size: ${FONT_SIZES.FS_24};
 `
 
 const ShareWrapper = styled.div`
@@ -55,5 +56,5 @@ const ShareWrapper = styled.div`
 `
 
 const IconButton = styled.button`
-  font-size: ${({theme}) => theme.fonts.size[18]};
+  font-size: ${FONT_SIZES.FS_18};
 `

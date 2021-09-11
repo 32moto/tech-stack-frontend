@@ -1,15 +1,12 @@
+import { StackCompanyType } from "@/types/stack/company"
 // StackCompanyList
-import { useGetStackCompanies } from "./hooks"
 import { StackCompanyList } from "./StackCompanyList"
 
 
 interface Props {
-  stackId: string
+  companies: StackCompanyType[]
 }
 
-export const StackCompanyListContainer = ({stackId} : Props) => {
-  const {companies, loading} = useGetStackCompanies({stackId})
-  if(loading) return <p>loading...</p>
-  if(!companies) return null
+export const StackCompanyListContainer = ({companies} : Props) => {
   return <StackCompanyList companies={companies} />
 }

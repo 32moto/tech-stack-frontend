@@ -2,7 +2,7 @@ export interface GetStackCompaniesParamsType {
   id: string
 }
 
-interface StackCompanies {
+export interface StackCompanyType {
   id: string
   name: string
   imagePath: string
@@ -10,7 +10,7 @@ interface StackCompanies {
 
 export type GetStackCompaniesResponseType = {
   getStack: {
-    companies: StackCompanies[]
+    companies: StackCompanyType[]
   } 
 }
 
