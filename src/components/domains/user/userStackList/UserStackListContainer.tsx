@@ -1,16 +1,13 @@
-import { useRouter } from "next/router";
 import { StackType } from "@/types/user/stack";
-import { useCurrentUser } from "@/hooks/auth/useCurrentUser";
 import { UserStackList } from "./UserStackList";
+import { useIsMine } from "./hooks";
 
 interface Props {
   stacks: StackType[]
 }
 
 export const UserStackListContainer = ({ stacks }: Props) => {
-  const currentUser = useCurrentUser()
-  const { id } = useRouter().query
-  const isMine = id === currentUser?.id
+  const { isMine } = useIsMine()
   const handleEditButtonOnClick = () => console.log('edit')
   const handleAddButtonOnClick = () => console.log('add')
   return (
