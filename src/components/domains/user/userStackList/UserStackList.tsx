@@ -8,19 +8,27 @@ import { COLORS, FONT_SIZES } from "@/constants/Styles"
 import { StackType } from "@/types/user/stack"
 // 
 import { UserStackListItemContainer } from "../userStackListItem/UserStackListItemContainer"
+import { PencilButton } from "@/components/common/Button/PencilButton"
 
 interface Props {
   stacks: StackType[]
   isMine: boolean
+  handleEditButtonOnClick: () => void
+  handleAddButtonOnClick: () => void
 }
 
-export const UserStackList = ({ stacks, isMine }: Props) => {
+export const UserStackList = ({
+  stacks,
+  isMine,
+  handleEditButtonOnClick,
+  handleAddButtonOnClick
+}: Props) => {
   return (
     <Container>
       {isMine && (
-        <EditButton onClick={() => {console.log('edit')}}>
-          <SvgIcon iconType='pen' />
-        </EditButton> 
+        <EditButtonWrapper>
+          <PencilButton onClick={handleEditButtonOnClick} />
+        </EditButtonWrapper> 
       )}
       <Ul>
         {stacks.map(stack => (
@@ -31,7 +39,7 @@ export const UserStackList = ({ stacks, isMine }: Props) => {
       </Ul>
       {isMine && (
         <AddButtonWrapper role='button'>
-          <CirclePlusButton onClick={() => console.log('add')} />
+          <CirclePlusButton onClick={handleAddButtonOnClick} />
         </AddButtonWrapper>
       )}
     </Container>
@@ -42,11 +50,10 @@ const Container = styled.div`
   position: relative;
 `
 
-const EditButton = styled.button`
+const EditButtonWrapper = styled.div`
   position: absolute;
   top: -16px;
   right: 0;
-  color: ${COLORS.GRAY[500]};
 `
 
 const Ul = styled.ul`
@@ -62,18 +69,4 @@ const AddButtonWrapper = styled.div`
   position: fixed;
   right: 30px;
   bottom: 90px;
-`
-
-const AddButton = styled.button`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0px 0px 5px 4px rgba(0, 0, 0, 0.2);
-  border-radius: 50%;
-  border: 1px;
-  width: 60px;
-  height: 60px;
-  font-weight: bold;
-  color: ${COLORS.GRAY[500]};
-  font-size: ${FONT_SIZES.FS_20};
 `
