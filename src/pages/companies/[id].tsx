@@ -10,7 +10,7 @@ interface Props {
 
 
 const Company = ({company}: Props) => {
-  console.log(company)
+
   return (
     <div>
       <CompanyInfoContainer name={company.name} imagePath={company.imagePath}/>
