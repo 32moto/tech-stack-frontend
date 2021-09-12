@@ -1,7 +1,12 @@
-import { SvgIcon } from "@/components/common/Icon"
-import { COLORS, FONT_SIZES } from "@/constants/Styles"
-import { StackType } from "@/types/user/stack"
 import styled from "styled-components"
+// components
+import { SvgIcon } from "@/components/common/Icon"
+import { CirclePlusButton } from "@/components/common/Button"
+// constants
+import { COLORS, FONT_SIZES } from "@/constants/Styles"
+// types
+import { StackType } from "@/types/user/stack"
+// 
 import { UserStackListItemContainer } from "../userStackListItem/UserStackListItemContainer"
 
 interface Props {
@@ -24,11 +29,11 @@ export const UserStackList = ({ stacks, isMine }: Props) => {
           </Li>
         ))}
       </Ul>
-      <AddButtonWrapper role='button'>
-        <AddButton>
-          <SvgIcon iconType='plus' />
-        </AddButton>
-      </AddButtonWrapper>
+      {isMine && (
+        <AddButtonWrapper role='button'>
+          <CirclePlusButton onClick={() => console.log('add')} />
+        </AddButtonWrapper>
+      )}
     </Container>
   )
 }
