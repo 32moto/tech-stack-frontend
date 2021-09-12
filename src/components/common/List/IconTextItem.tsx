@@ -1,5 +1,6 @@
-import { Icon, ShapeType, SizeType } from '@/components/common/Icon'
 import styled from 'styled-components'
+import { Icon, ShapeType, SizeType } from '@/components/common/Icon'
+import { FONT_SIZES } from '@/constants/Styles'
 
 interface Props {
   name: string
@@ -25,6 +26,5 @@ const Wrapper = styled.div`
 
 const Span = styled.span`
   margin-top: 8px;
-
-  font-size: ${({theme}) => theme.fonts.size[14]};
+  font-size: ${FONT_SIZES.BASE_FONT_SIZE};
 `

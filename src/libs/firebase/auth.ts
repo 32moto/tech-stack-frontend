@@ -1,6 +1,6 @@
 import { initializeApp } from "@firebase/app";
 import { getAuth, signInWithPopup, GoogleAuthProvider, User } from "@firebase/auth";
-import { UserType } from "@/types/user";
+import { CurrentUserType } from "@/types/user";
 import { firebaseConfig } from "./config";
 
 initializeApp(firebaseConfig);
@@ -25,7 +25,7 @@ export const firebaseLogout = async() => {
   auth.signOut()
 };
 
-export const convertToUser = (user: User): UserType => {
+export const convertToUser = (user: User): CurrentUserType => {
   return {
     id: user.uid,
     name: user.displayName || 'No name',

@@ -1,3 +1,6 @@
+import { StackCompanyType } from "./company";
+import { StackUserType } from "./user";
+
 export interface GetStackParamsType {
   id: string
 }
@@ -11,5 +14,39 @@ export interface GetStackResponseType {
 }
 
 export interface GetStackVarsType {
+  id: string
+}
+
+export interface GetStackAndUsersParamsType {
+  id: string
+}
+
+export interface GetStackAndUsersResponseType {
+  stack: {
+    id: string
+    name: string
+    imagePath: string
+    users: StackUserType[]
+  }
+}
+
+export interface GetStackAndUsersVarsType {
+  id: string
+}
+
+export interface GetStackAndCompaniesParamsType {
+  id: string
+}
+
+export interface GetStackAndCompaniesResponseType {
+  stack: {
+    id: string
+    name: string
+    imagePath: string
+    companies: StackCompanyType[]
+  }
+}
+
+export interface GetStackAndCompaniesVarsType {
   id: string
 }

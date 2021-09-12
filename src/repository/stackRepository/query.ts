@@ -34,3 +34,33 @@ export const GET_STACK_USERS =  gql`
     }
   }
 `
+
+export const GET_STACK_AND_USERS =  gql`
+  query getStackAndUsers ($id: ID!) {
+    stack(id: $id) {
+      id
+      name
+      imagePath
+      users {
+        id
+        name
+        imagePath
+      }
+    }
+  }
+`
+
+export const GET_STACK_AND_COMPANIES =  gql`
+  query getStackAndUsers ($id: ID!) {
+    stack(id: $id) {
+      id
+      name
+      imagePath
+      companies {
+        id
+        name
+        imagePath
+      }
+    }
+  }
+`

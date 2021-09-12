@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { StackCompanyType } from "@/types/stack/company"
 import { sp, pc } from '@/config/media'
+import { FONT_SIZES } from '@/constants/Styles'
 // stack company
 import { StackCompanyListItemContainer } from '@/components/domains/stack/company/stackCompanyListItem'
 
@@ -30,7 +31,7 @@ const Wrapper = styled.div`
 
 const H3 = styled.h3`
   text-align: center;
-  font-size: ${({theme}) => theme.fonts.size[18]};
+  font-size: ${FONT_SIZES.FS_18};
 `
 
 const Ul = styled.ul`

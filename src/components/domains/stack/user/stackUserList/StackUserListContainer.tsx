@@ -1,15 +1,11 @@
-// StackUserList
-import { useGetStackUsers } from "./hooks"
+import { StackUserType } from "@/types/stack/user"
 import { StackUserList } from "./StackUserList"
 
 
 interface Props {
-  stackId: string
+  stackUsers: StackUserType[]
 }
 
-export const StackUserListContainer = ({ stackId } : Props) => {
-  const {users, loading} = useGetStackUsers({stackId})
-  if(loading) return <p>loading...</p>
-  if(!users) return null
-  return <StackUserList users={users} />
+export const StackUserListContainer = ({ stackUsers } : Props) => {
+  return <StackUserList users={stackUsers} />
 }

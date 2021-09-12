@@ -2,7 +2,7 @@ export interface GetStackUsersParamsType {
   id: string
 }
 
-interface StackUser {
+export interface StackUserType {
   id: string
   name: string
   imagePath: string
@@ -10,7 +10,7 @@ interface StackUser {
 
 export type GetStackUsersResponseType = {
   getStack: {
-    users : StackUser[]
+    users : StackUserType[]
   }
 }
 
