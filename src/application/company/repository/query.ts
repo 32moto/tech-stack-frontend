@@ -6,10 +6,16 @@ export const GET_COMPANY = gql `
       id
       name
       imagePath
+      stacks {
+        id
+        name
+        imagePath  
+      }  
     }
   }
 `
 
+// 企業の基本情報とstackを一括取得している為、現状使用なし
 export const GET_COMPANY_STACKS = gql `
   query getCompanyStacks($id: ID!) {
     company(id: $id) {
