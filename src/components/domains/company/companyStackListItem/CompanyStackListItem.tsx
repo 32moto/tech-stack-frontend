@@ -7,6 +7,6 @@ interface Props {
 
 export const CompanyStackListItem = ({ stack } :Props) => {
   return (
-    <IconTextItem name={stack.name} imageSrc={stack.iconPath} iconShape='rouded' iconSize='s' />
+    <IconTextItem name={stack.name} imageSrc={stack.imagePath} iconShape='rouded' iconSize='s' />
   )
 }
