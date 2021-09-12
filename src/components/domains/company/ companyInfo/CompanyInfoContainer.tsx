@@ -1,5 +1,4 @@
 import CompanyInfo from "@/components/domains/company/ companyInfo/CompanyInfo";
-import {companyRepository} from "@/repository/companyRepository";
 
 interface Props {
   name: string

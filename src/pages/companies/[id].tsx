@@ -1,13 +1,12 @@
 import { GetServerSideProps } from "next"
 import CompanyInfoContainer from "@/components/domains/company/ companyInfo/CompanyInfoContainer";
 import CompanyStackListContainer from "@/components/domains/company/companyStackList/CompanyStackListContainer";
-import { companyRepository } from "@/repository/companyRepository";
 import { CompanyType } from "@/types/company";
+import { getCompany } from "@/application/company/usecase";
 
 interface Props {
   company: CompanyType
 }
-
 
 const Company = ({company}: Props) => {
 
@@ -27,7 +26,7 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
       notFound: true
     }
   }
-  const { data } = await companyRepository().useGetCompany({id: String(params.id)})
+  const { data } = await getCompany({id: String(params.id)})
 
   if(!data) {
     return {
