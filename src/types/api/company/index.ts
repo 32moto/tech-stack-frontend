@@ -7,6 +7,7 @@ export type GetCompanyResponseType = {
     id: string
     name: string
     imagePath: string
+    stacks: CompanyStackType[]
   }
 }
 

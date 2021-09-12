@@ -1,19 +1,15 @@
 // import components
 import CompanyStackList from "@/components/domains/company/companyStackList/CompanyStackList";
-// import repository
-import {companyRepository} from "@/repository/companyRepository";
+// import types
+import { CompanyStackType } from "@/types/company";
 
 interface Props {
-  companyId: string
+  stacks: CompanyStackType[]
 }
 
-const CompanyStackListContainer = ({companyId}: Props) => {
-  const { data, loading } = companyRepository().useGetCompanyStack({id: companyId})
+const CompanyStackListContainer = ({stacks}: Props) => {
 
-  if(loading) return <p>loading...</p>
-  if(!data) return null
-
-  return <CompanyStackList stacks={data.company.stacks} />
+  return <CompanyStackList stacks={stacks} />
 }
 
 export default CompanyStackListContainer

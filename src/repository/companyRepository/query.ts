@@ -6,6 +6,11 @@ export const GET_COMPANY = gql `
       id
       name
       imagePath
+      stacks {
+        id
+        name
+        imagePath  
+      }  
     }
   }
 `
