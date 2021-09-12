@@ -17,7 +17,7 @@ export const GET_USER =  gql`
 
 export const GET_USER_STACKS =  gql`
   query getUserStacks($id: ID!) {
-    getUser(id: $id) {
+    user(id: $id) {
       stacks {
         id
         name
