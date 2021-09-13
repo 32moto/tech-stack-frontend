@@ -1,4 +1,4 @@
-import { GetServerSideProps } from "next"
+import { GetServerSideProps, GetServerSidePropsResult } from "next"
 import { UserInfoContainer } from "@/components/domains/user/userInfo"
 import { UserStackListContainer } from "@/components/domains/user/userStackList"
 import { MarginPaddingWrapper } from "@/components/common/Wrapper"
@@ -22,7 +22,7 @@ const User = ({ user }: Props) => {
 
 export default User
 
-export const getServerSideProps: GetServerSideProps = async ({ params }) => {
+export const getServerSideProps: GetServerSideProps = async ({ params }): Promise<GetServerSidePropsResult<Props>> => {
   if(!params) {
     return {
       notFound: true

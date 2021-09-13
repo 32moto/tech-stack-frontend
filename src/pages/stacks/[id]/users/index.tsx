@@ -1,4 +1,4 @@
-import { GetServerSideProps } from "next"
+import { GetServerSideProps, GetServerSidePropsResult } from "next"
 import { StackInfoContainer } from "@/components/domains/stack/stackInfo"
 import { StackUserListContainer } from "@/components/domains/stack/user/stackUserList"
 import { StackUserType } from "@/types/stack/user"
@@ -22,7 +22,7 @@ const StackUsers = ({ stack }: Props) => {
   )
 }
 
-export const getServerSideProps: GetServerSideProps = async ({ params }) => {
+export const getServerSideProps: GetServerSideProps = async ({ params }): Promise<GetServerSidePropsResult<Props>> => {
   if(!params) {
     return {
       notFound: true
