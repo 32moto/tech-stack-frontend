@@ -1,4 +1,4 @@
-import { userRepository } from "@/repository/userRepository"
+import { userRepository } from "@/application/users/repository"
 
 export const useGetUser = ({id}: {id: string}) => {
   const { data, loading, error } = userRepository().useGetUser({id})
