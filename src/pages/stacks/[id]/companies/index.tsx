@@ -1,8 +1,8 @@
-import { GetServerSideProps } from "next"
+import { GetServerSideProps, GetServerSidePropsResult } from "next"
 import { StackInfoContainer } from "@/components/domains/stack/stackInfo"
 import { StackCompanyListContainer } from "@/components/domains/stack/company/stackCompanyList"
-import { stackRepository } from "@/repository/stackRepository"
 import { StackCompanyType } from "@/types/stack/company"
+import { getStackAndCompanies } from "@/application/stack/usecase"
 
 interface Props {
   stack: {
@@ -24,13 +24,13 @@ const StackCompanies = ({stack}: Props) => {
 
 export default StackCompanies
 
-export const getServerSideProps: GetServerSideProps = async ({ params }) => {
+export const getServerSideProps: GetServerSideProps = async ({ params }): Promise<GetServerSidePropsResult<Props>> => {
   if(!params) {
     return {
       notFound: true
     }
   }
-  const { data } = await stackRepository().getStackAndCompanies({id: String(params.id)})
+  const { data } = await getStackAndCompanies({id: String(params.id)})
   if(!data) {
     return {
       notFound: true

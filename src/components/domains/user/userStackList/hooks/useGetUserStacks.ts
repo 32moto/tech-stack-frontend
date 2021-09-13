@@ -1,4 +1,4 @@
-import { userRepository } from "@/repository/userRepository"
+import { userRepository } from "@/application/user/repository"
 
 interface Props {
   id: string

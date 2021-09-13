@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { auth, convertToUser } from "@/libs/firebase/auth";
-import { authRepository } from "@/repository/authRepository";
+// import { useSetCurrentUser } from "@/application/auth/usecase";
 
 export const useListenAuthState = () => {
   // const [ setCurrentUser ] = authRepository().useSetCurrentUser()

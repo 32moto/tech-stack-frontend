@@ -1,4 +1,4 @@
-import { GetServerSideProps } from "next"
+import { GetServerSideProps, GetServerSidePropsResult } from "next"
 import CompanyInfoContainer from "@/components/domains/company/ companyInfo/CompanyInfoContainer";
 import CompanyStackListContainer from "@/components/domains/company/companyStackList/CompanyStackListContainer";
 import { CompanyType } from "@/types/company";
@@ -20,7 +20,7 @@ const Company = ({company}: Props) => {
 
 export default Company
 
-export const getServerSideProps: GetServerSideProps = async ({ params }) => {
+export const getServerSideProps: GetServerSideProps = async ({ params }): Promise<GetServerSidePropsResult<Props>> => {
   if(!params) {
     return {
       notFound: true

@@ -1,4 +1,4 @@
-import { stackRepository } from "@/repository/stackRepository";
+import { stackRepository } from "@/application/stack/repository"
 
 interface Props {
   stackId: string
