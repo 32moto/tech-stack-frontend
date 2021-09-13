@@ -3,7 +3,7 @@ import { UserInfoContainer } from "@/components/domains/user/userInfo"
 import { UserStackListContainer } from "@/components/domains/user/userStackList"
 import { MarginPaddingWrapper } from "@/components/common/Wrapper"
 import { UserType } from "@/types/user"
-import { getUser } from "@/application/users/usecase"
+import { getUser } from "@/application/user/usecase"
 
 interface Props {
   user: UserType
