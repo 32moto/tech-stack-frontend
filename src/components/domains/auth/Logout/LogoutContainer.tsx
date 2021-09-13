@@ -1,7 +1,6 @@
-import { authRepository } from "@/repository/authRepository"
+import { logout } from "@/application/auth/usecase"
 import { Logout } from "./Logout"
 
 export const LogoutContainer = () => {
-  const { logout } = authRepository()
   return <Logout handleLogout={logout} />
 }

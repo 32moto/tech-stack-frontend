@@ -2,8 +2,8 @@ import { GetServerSideProps } from "next"
 import { UserInfoContainer } from "@/components/domains/user/userInfo"
 import { UserStackListContainer } from "@/components/domains/user/userStackList"
 import { MarginPaddingWrapper } from "@/components/common/Wrapper"
-import { userRepository } from "@/repository/userRepository"
 import { UserType } from "@/types/user"
+import { getUser } from "@/application/users/usecase"
 
 interface Props {
   user: UserType
@@ -28,7 +28,7 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
       notFound: true
     }
   }
-  const { data } = await userRepository().getUser({id: String(params.id)})
+  const { data } = await getUser({id: String(params.id)})
   if(!data) {
     return {
       notFound: true

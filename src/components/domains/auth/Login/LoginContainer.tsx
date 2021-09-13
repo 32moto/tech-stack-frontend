@@ -1,7 +1,6 @@
-import { authRepository } from "@/repository/authRepository"
+import { login } from "@/application/auth/usecase"
 import { Login } from "./Login"
 
 export const LoginContainer = () => {
-  const { login } = authRepository()
   return <Login handleLogin={login} />
 }

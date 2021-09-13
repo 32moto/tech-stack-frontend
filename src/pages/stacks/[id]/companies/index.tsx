@@ -1,8 +1,8 @@
 import { GetServerSideProps } from "next"
 import { StackInfoContainer } from "@/components/domains/stack/stackInfo"
 import { StackCompanyListContainer } from "@/components/domains/stack/company/stackCompanyList"
-import { stackRepository } from "@/repository/stackRepository"
 import { StackCompanyType } from "@/types/stack/company"
+import { getStackAndCompanies } from "@/application/stack/usecase"
 
 interface Props {
   stack: {
@@ -30,7 +30,7 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
       notFound: true
     }
   }
-  const { data } = await stackRepository().getStackAndCompanies({id: String(params.id)})
+  const { data } = await getStackAndCompanies({id: String(params.id)})
   if(!data) {
     return {
       notFound: true
