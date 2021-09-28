@@ -21,6 +21,9 @@ export default function Home() {
         <Li>
           <Link href={`/companies/1`}>companies/:id</Link>
         </Li>
+        <Li>
+          <Link href={`/companies/1/users`}>companies/:id/users</Link>
+        </Li>
       </ul>
       <LoginContainer />
       <LogoutContainer />
