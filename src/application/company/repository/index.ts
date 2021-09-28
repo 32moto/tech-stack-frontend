@@ -20,7 +20,7 @@ export const companyRepository = () => {
     return useQuery<GetCompanyStackResponseType, GetCompanyStackVarsType>(GET_COMPANY_STACKS, {variables : {id}})
   }
   const getCompanyAndUsers = ({ id }: GetCompanyParamsType) => {
-    return client.query<GetCompanyAndUsersResponseType, GetCompanyAndUsersVarsType>(GET_COMPANY_AND_USER, {variables : {id}})
+    return client.query<GetCompanyAndUsersResponseType, GetCompanyAndUsersVarsType>({query: GET_COMPANY_AND_USER, variables : {id}})
   }
   return {
     getCompany,
