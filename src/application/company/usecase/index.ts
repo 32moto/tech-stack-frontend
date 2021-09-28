@@ -1,6 +1,7 @@
-import { companyRepository } from "@/application/company/repository";
+import { getCompany } from "./getCompany";
+import { getCompanyAndUsers } from "./getCompanyAndUsers";
 
-export const getCompany = ({id}: {id: string}) => {
-  const data = companyRepository().getCompany({id})
-  return data
+export {
+  getCompany,
+  getCompanyAndUsers
 }

@@ -12,6 +12,12 @@ export interface CompanyStackType {
   imagePath: string
 }
 
+export interface CompanyUserType {
+  id: string
+  name: string
+  imagePath: string
+}
+
 export type GetCompanyResponseType = {
   company: {
     id: string
@@ -29,5 +35,18 @@ export type GetCompanyStackResponseType = {
 }
 
 export interface GetCompanyStackVarsType {
+  id: string
+}
+
+export type GetCompanyAndUsersResponseType = {
+  company: {
+    id: string
+    name: string
+    imagePath: string
+    users: CompanyUserType[]
+  }
+}
+
+export interface GetCompanyAndUsersVarsType {
   id: string
 }

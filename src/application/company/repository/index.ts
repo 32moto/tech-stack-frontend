@@ -1,6 +1,14 @@
 import { useQuery } from "@apollo/client"
-import { GetCompanyParamsType, GetCompanyResponseType, GetCompanyStackResponseType, GetCompanyVarsType, GetCompanyStackVarsType } from "@/types/api/company";
-import {GET_COMPANY, GET_COMPANY_STACKS} from "./query"
+import {
+  GetCompanyParamsType,
+  GetCompanyResponseType,
+  GetCompanyStackResponseType,
+  GetCompanyAndUsersResponseType,
+  GetCompanyVarsType,
+  GetCompanyStackVarsType,
+  GetCompanyAndUsersVarsType
+} from "@/types/api/company";
+import {GET_COMPANY, GET_COMPANY_AND_USER, GET_COMPANY_STACKS} from "./query"
 import { client } from "@/libs/apollo"
 
 export const companyRepository = () => {
@@ -11,8 +19,12 @@ export const companyRepository = () => {
   const useGetCompanyStack = ({ id }: GetCompanyParamsType) => {
     return useQuery<GetCompanyStackResponseType, GetCompanyStackVarsType>(GET_COMPANY_STACKS, {variables : {id}})
   }
+  const getCompanyAndUsers = ({ id }: GetCompanyParamsType) => {
+    return client.query<GetCompanyAndUsersResponseType, GetCompanyAndUsersVarsType>({query: GET_COMPANY_AND_USER, variables : {id}})
+  }
   return {
     getCompany,
-    useGetCompanyStack
+    useGetCompanyStack,
+    getCompanyAndUsers
   }
 }
