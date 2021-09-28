@@ -27,3 +27,18 @@ export const GET_COMPANY_STACKS = gql `
     }
   }
 `
+
+export const GET_COMPANY_AND_USER = gql `
+  query getCompanyAndUsers($id: ID!) {
+    company(id: 1) {
+      id
+      name
+      imagePath
+      users {
+        id
+        name
+        imagePath
+      }
+    }
+  }
+`
