@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import { COLORS } from "@/constants/Styles"
-import { getStacks } from "@/application/stack/usecase/getStacks";
+import {CompanyStackType} from "@/types/company";
 
-const CompanyStackModalContainer = () => {
-  const { data, loading } = getStacks()
-  if(loading) return <p>loading...</p>
-  if(!data) return null
-  
+interface Props {
+  stacks: CompanyStackType[]
+}
+
+const StackModal = ({stacks}: Props) => {
+
   return (
     <Container>
       <Title>新規追加</Title>
@@ -14,7 +15,7 @@ const CompanyStackModalContainer = () => {
   )
 }
 
-export default CompanyStackModalContainer
+export default StackModal
 
 const Container = styled.div`
   position: fixed;

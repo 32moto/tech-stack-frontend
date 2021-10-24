@@ -2,7 +2,7 @@ import { useState } from 'react'
 import styled from "styled-components";
 // import components
 import CompanyStackList from "@/components/domains/company/companyStackList/CompanyStackList";
-import CompanyStackModalContainer from "@/components/domains/company/companyStackModal/companyStackModalContainer";
+import StackModalContainer from "@/components/domains/stack/stackModal/stackModalContainer";
 // import types
 import { CompanyStackType } from "@/types/company";
 
@@ -25,7 +25,7 @@ const CompanyStackListContainer = ({stacks}: Props) => {
         handleAddButtonOnClick={handleAddButtonOnClick}
       />
       {isOpenStackAddModal &&
-       <CompanyStackModalContainer />
+       <StackModalContainer />
       }
     </Container>
   )
