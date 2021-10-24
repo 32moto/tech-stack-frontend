@@ -1,9 +1,12 @@
 import styled from "styled-components";
 import { COLORS } from "@/constants/Styles"
-import {CompanyStackType} from "@/types/company";
+// import components
+import StackList from "@/components/domains/stack/stackList/stackList";
+// import types
+import { StackType } from "@/types/stack";
 
 interface Props {
-  stacks: CompanyStackType[]
+  stacks: StackType[]
 }
 
 const StackModal = ({stacks}: Props) => {
@@ -11,6 +14,7 @@ const StackModal = ({stacks}: Props) => {
   return (
     <Container>
       <Title>新規追加</Title>
+      <StackList stacks={stacks}/>
     </Container>
   )
 }
