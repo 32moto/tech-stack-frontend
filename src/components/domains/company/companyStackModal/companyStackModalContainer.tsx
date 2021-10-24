@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import { COLORS } from "@/constants/Styles"
+import { getStacks } from "@/application/stack/usecase/getStacks";
 
-interface Props {
-}
-
-const CompanyStackModalContainer = ({}: Props) => {
-  console.log('Modal')
+const CompanyStackModalContainer = () => {
+  const { data, loading } = getStacks()
+  if(loading) return <p>loading...</p>
+  if(!data) return null
+  
   return (
     <Container>
       <Title>新規追加</Title>

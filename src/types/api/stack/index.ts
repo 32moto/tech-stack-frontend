@@ -50,3 +50,11 @@ export interface GetStackAndCompaniesResponseType {
 export interface GetStackAndCompaniesVarsType {
   id: string
 }
+
+export interface GetStacksResponseType {
+  stacks: {
+    id: string
+    name: string
+    imagePath: string
+  }[]
+}
