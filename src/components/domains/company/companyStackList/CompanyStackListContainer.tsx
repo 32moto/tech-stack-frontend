@@ -8,8 +8,10 @@ interface Props {
 }
 
 const CompanyStackListContainer = ({stacks}: Props) => {
+  const handleEditButtonOnClick = () => console.log('edit')
+  const handleAddButtonOnClick = () => console.log('add')
 
-  return <CompanyStackList stacks={stacks} />
+  return <CompanyStackList stacks={stacks} handleEditButtonOnClick={handleEditButtonOnClick} handleAddButtonOnClick={handleAddButtonOnClick}/>
 }
 
 export default CompanyStackListContainer
