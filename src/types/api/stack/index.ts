@@ -1,5 +1,6 @@
 import { StackCompanyType } from "./company";
 import { StackUserType } from "./user";
+import { StackType } from "@/types/stack";
 
 export interface GetStackParamsType {
   id: string
@@ -49,4 +50,8 @@ export interface GetStackAndCompaniesResponseType {
 
 export interface GetStackAndCompaniesVarsType {
   id: string
+}
+
+export interface GetStacksResponseType {
+  stacks: StackType[]
 }

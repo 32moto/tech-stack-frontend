@@ -64,3 +64,13 @@ export const GET_STACK_AND_COMPANIES =  gql`
     }
   }
 `
+
+export const GET_STACKS =  gql`
+  query getStacks {
+    stacks {
+      id
+      name
+      imagePath
+    }
+  }
+`
